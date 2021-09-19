@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rest参数</title>
+</head>
+<body>
+    <script>
+        // ES6 引入 rest 参数，用于获取函数的实参，用来代替 arguments
+        // ES5 获取实参的方式
+        // function date(){
+            // arguments  不是数组只能访问下标
+        //     console.log(arguments)
+        // }
+        // date('1','2','3')
+
+        // rest 参数
+        function date(...args){
+            // 这里的args是数组 可以按照数组的方式对其进行操作 比如 使用filter
+            console.log(args)
+        }
+        date('郭同学','王同学','郑同学')
+
+        // rest 参数必须要放到参数最后
+        // function fn(a,b,...args){
+        //     console.log(a)
+        //     console.log(b)
+        //     console.log(args)
+        // }
+        // fn(1,2,3,4,5,6)
+
+    </script>
+</body>
+</html>
